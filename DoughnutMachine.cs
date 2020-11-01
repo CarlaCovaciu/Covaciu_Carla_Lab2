@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace Covaciu_Carla_lab2
 {
-    class DoughnutMachine
+    class DoughnutMachine : Component
     {
         private DoughnutType mFlavor;
         public DoughnutType Flavor
@@ -22,8 +22,7 @@ namespace Covaciu_Carla_lab2
                 mFlavor = value;
             }
         }
-        class DougnutMachine : Component
-        {
+        
             private System.Collections.ArrayList mDoughnuts = new System.Collections.ArrayList();
             public Doughnut this[int Index]
             {
@@ -36,7 +35,6 @@ namespace Covaciu_Carla_lab2
                     mDoughnuts[Index] = value;
                 }
             }
-        }
         public delegate void DoughnutCompleteDelegate();
         public event DoughnutCompleteDelegate DoughnutComplete;
 
